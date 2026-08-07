@@ -1,9 +1,21 @@
-default: master/resume.tex
-	@echo 'Build "system" version...'
-	latexmk -g -pdf -usepretex="\def\system{}" --outdir="system" master/resume.tex > /dev/null
-	@echo 'Build "backend" version...'
-	latexmk -g -pdf -usepretex="\def\backend{}" --outdir="backend" master/resume.tex > /dev/null
+OUTDIR=build
+SOURCE=master/resume.tex
+
+.PHONY: all system backend open clean
+
+all: system backend
+
+system: $(SOURCE)
+	@echo 'Building "system" version...'
+	latexmk -g -pdf -usepretex="\def\system{}" --outdir="$(OUTDIR)/system" $^ > /dev/null
+
+backend: $(SOURCE)
+	@echo 'Building "backend" version...'
+	latexmk -g -pdf -usepretex="\def\backend{}" --outdir="$(OUTDIR)/backend" $^ > /dev/null
+
+# Open all rendered PDF files in the output directory
+open:
+	$(foreach rendered, $(wildcard $(OUTDIR)/*/*.pdf), open $(rendered);)
 
 clean:
-	@-rm system/*
-	@-rm backend/*
+	@-rm -rf $(OUTDIR)
