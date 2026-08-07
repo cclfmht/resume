@@ -125,13 +125,25 @@
 {B.S. in Information Management}{Sep. 2022 - June. 2026}
 \resumeSubHeadingListEnd
 
-\section{Summary}
-Information Management graduate at National Taiwan University with strong experience in Rust, C, alongside
-C++, Python, TypeScript and functional programming fundamentals. Contributor to official Rust compiler
-with proven track record (in \hyperref[sec:osc]{Open Source Contribution} section). Passionate about system
-softwares, compiler development, high-performance engineering, concurrent and asynchronous programming.
-Experienced in building fair and scalable MCS spinlock, high-performance Web backend to handle I/O-bound in
-combination with CPU-bound tasks, and reducing test time by 50\% through buffered I/O and in-memory simulation.
+\ifdefined\system
+	\section{Summary}
+	Information Management graduate at National Taiwan University with strong experience in Rust, C, alongside
+	C++, Python and functional programming fundamentals. Contributor to official Rust compiler
+	with proven track record (in \hyperref[sec:osc]{Open Source Contribution} section). Passionate about system
+	softwares, compiler development, high-performance engineering, concurrent and asynchronous programming.
+	Experienced in building fair and scalable MCS spinlock, high-performance Web backend to handle I/O-bound in
+	combination with CPU-bound tasks, and reducing test time by 50\% through buffered I/O and in-memory simulation.
+\fi
+
+\ifdefined\backend
+	\section{Summary}
+	Information Management graduate at National Taiwan University with strong experience in Rust, C, alongside
+	C++, Python, TypeScript and functional programming fundamentals. Contributor to industry-level projects
+	such as official Rust compiler with proven track record (in \hyperref[sec:osc]{Open Source Contribution} section).
+	Passionate about high-performance engineering, concurrent and asynchronous programming, and developement in
+	system softwares such as compiler. Experienced in high-performance Web backend to handle I/O-bound in combination
+	with CPU-bound tasks, and reducing test time by 50\% through buffered I/O and in-memory simulation.
+\fi
 
 % \section{Summary}
 % I have experience programming in Rust, C/C++, Python, TypeScript and understand functional programming
@@ -213,14 +225,26 @@ combination with CPU-bound tasks, and reducing test time by 50\% through buffere
 \end{itemize}
 
 %-----------PROGRAMMING SKILLS-----------
-\section{Technical Skills}
-\begin{itemize}[leftmargin=0.15in, label={}]
-	\small{\item{
-	      \textbf{Programming Languages}{: Rust, C/C++, Python, TypeScript} \\
-	      \textbf{Tools}{: Linux (Ubuntu/Linux Mint), GDB/LLDB, perf\_event (perf), Git, Docker, PostgreSQL, Prisma, Bruno} \\
-	      \textbf{Frameworks}{: Actix Web, Tokio, Sqlx, Loco.rs, NumPy, PyTorch} \\
-	      }}
-\end{itemize}
+\ifdefined\system
+	\section{Technical Skills}
+	\begin{itemize}[leftmargin=0.15in, label={}]
+		\small{\item{
+		      \textbf{Programming Languages}{: Rust, C/C++, Python} \\
+		      \textbf{Tools}{: Linux (Ubuntu/Linux Mint), Git, GDB/LLDB, perf\_event (perf), GNU Make, Docker, PostgreSQL} \\
+		      }}
+	\end{itemize}
+\fi
+
+\ifdefined\backend
+	\section{Technical Skills}
+	\begin{itemize}[leftmargin=0.15in, label={}]
+		\small{\item{
+		      \textbf{Programming Languages}{: Rust, C/C++, Python, TypeScript} \\
+		      \textbf{Tools}{: Linux (Ubuntu/Linux Mint), Git, Docker, PostgreSQL, Prisma, Bruno, perf\_event (perf), GDB/LLDB} \\
+		      \textbf{Frameworks}{: Actix Web, Tokio, Sqlx, Loco.rs, NumPy, PyTorch} \\
+		      }}
+	\end{itemize}
+\fi
 
 %-----------PROJECTS-----------
 \section{Projects}
@@ -240,48 +264,56 @@ combination with CPU-bound tasks, and reducing test time by 50\% through buffere
 \resumeItem{Finalists of the 2025 30th International ICT Innovative Services Awards.}
 \resumeItemListEnd
 
-\resumeProjectHeading
-{\textbf{NTUGuessr} $|$ \emph{Typescript, NextJS, Prisma, Docker, PostgreSQL, Bruno}}{}
-\resumeItemListStart
-\resumeItem{Developed a Web game similar to GeoGuessr, which
-	shows players an image of some landmark and ask them to pin its location on a map.
-	It's a group project.}
-\resumeItem{Found out and fixed environmental inconsistent setup in our test suite that
-	made about 35\% of the tests accidentally failed and was not awared by our team members.
-	Also, identified Cookies cacheing behavior of Bruno which caused non-deterministic testing results, improving test
-	reliability for the backend team.}
-\resumeItemListEnd
+\ifdefined\backend
+	\resumeProjectHeading
+	{\textbf{NTUGuessr} $|$ \emph{Typescript, NextJS, Prisma, Docker, PostgreSQL, Bruno}}{}
+	\resumeItemListStart
+	\resumeItem{Developed a Web game similar to GeoGuessr, which
+		shows players an image of some landmark and ask them to pin its location on a map.
+		It's a group project.}
+	\resumeItem{Found out and fixed environmental inconsistent setup in our test suite that
+		made about 35\% of the tests accidentally failed and was not awared by our team members.
+		Also, identified Cookies cacheing behavior of Bruno which caused non-deterministic testing results, improving test
+		reliability for the backend team.}
+	\resumeItemListEnd
+\fi
 
-\resumeProjectHeading
-{\textbf{Spinlock} $|$ \emph{Linux, Rust}}{}
-\resumeItemListStart
-\resumeItem{Implemented a MCS spinlock to improve my understanding in concurrecy control. This
-	involves atomic operations, memory ordering, fair locking, energy-aware spinning, and
-	scalability under multi-core environment.}
-\resumeItem{Inspired by Linux kernel MCS lock and paper
-	\href{https://people.csail.mit.edu/nickolai/papers/boyd-wickizer-locks.pdf}{\underline{Non-scalable locks are dangerous}}.}
-\resumeItemListEnd
+\ifdefined\system
+	\resumeProjectHeading
+	{\textbf{Spinlock} $|$ \emph{Linux, Rust}}{}
+	\resumeItemListStart
+	\resumeItem{Implemented a MCS spinlock to improve my understanding in concurrecy control. This
+		involves atomic operations, memory ordering, fair locking, energy-aware spinning, and
+		scalability under multi-core environment.}
+	\resumeItem{Inspired by Linux kernel MCS lock and paper
+		\href{https://people.csail.mit.edu/nickolai/papers/boyd-wickizer-locks.pdf}{\underline{Non-scalable locks are dangerous}}.}
+	\resumeItemListEnd
+\fi
 
-\resumeProjectHeading
-{\textbf{Booklyn} $|$ \emph{PostgreSQL, Docker, Swagger UI, Rust, Actix Web, Sqlx}}{}
-\resumeItemListStart
-\resumeItem{Developed a book-centric social platform that
-	integrates user reviews collected from internet and provides personalized recommendations. It's a group project.}
-\resumeItem{Built the whole backend in Rust, Actix Web and Sqlx frameworks for high-performance and compiler-time query
-	checks, and we chose PostgreSQL for our DB.}
-\resumeItem{Integrated swagger UI to automatically generate API document from OpenAPI
-	specification, providing clear API contract for the frontend team and improving team
-	velocity.}
-\resumeItemListEnd
+\ifdefined\backend
+	\resumeProjectHeading
+	{\textbf{Booklyn} $|$ \emph{PostgreSQL, Docker, Swagger UI, Rust, Actix Web, Sqlx}}{}
+	\resumeItemListStart
+	\resumeItem{Developed a book-centric social platform that
+		integrates user reviews collected from internet and provides personalized recommendations. It's a group project.}
+	\resumeItem{Built the whole backend in Rust, Actix Web and Sqlx frameworks for high-performance and compiler-time query
+		checks, and we chose PostgreSQL for our DB.}
+	\resumeItem{Integrated swagger UI to automatically generate API document from OpenAPI
+		specification, providing clear API contract for the frontend team and improving team
+		velocity.}
+	\resumeItemListEnd
+\fi
 
-\resumeProjectHeading
-{\textbf{Jack-compiler} $|$ \emph{Rust, Logos, Lalrpop}}{}
-\resumeItemListStart
-\resumeItem{Built a simple compiler frontend that generates AST for JACK programming language in XML format.}
-\resumeItem{Integrated Logos framework for lexing and Lalrpop framework for parsing.}
-\resumeItem{Tested XML files writing function through buffered I/O and in-memory simulation, reducing
-	testing time by 50\% compared to real file I/O.}
-\resumeItemListEnd
+\ifdefined\system
+	\resumeProjectHeading
+	{\textbf{Jack-compiler} $|$ \emph{Rust, Logos, Lalrpop}}{}
+	\resumeItemListStart
+	\resumeItem{Built a simple compiler frontend that generates AST for JACK programming language in XML format.}
+	\resumeItem{Integrated Logos framework for lexing and Lalrpop framework for parsing.}
+	\resumeItem{Tested XML files writing function through buffered I/O and in-memory simulation, reducing
+		testing time by 50\% compared to real file I/O.}
+	\resumeItemListEnd
+\fi
 
 \resumeSubHeadingListEnd
 
