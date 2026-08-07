@@ -1,0 +1,264 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+	\textbf{\Huge \scshape Chun-Chi, Lin} \\ \vspace{1pt}
+	\small (+886) 966-433-761 $|$ Email: \href{mailto:chunchilin0202@gmail.com}{\underline{chunchilin0202@gmail.com}} $|$
+	Github: \href{https://github.com/cclfmht}{\underline{github.com/cclfmht}}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+\resumeSubheading
+{National Taiwan University}{Daan, Taipei}
+{Bachelor of Information Management}{Sep. 2022 - June. 2026}
+\resumeSubHeadingListEnd
+
+\section{Summary}
+I have experience programming in Rust, C/C++, Python and understand some functional programming
+paradigm through Haskell and Ocaml. I am especially familiar with Rust and have contributed to
+the upstream. I have experience in Web backend development and have also built some projects
+related to system software. I am able to use development tools like Git, GDB/LLDB,
+perf\_events (perf), Docker, PostgreSQL, and I am familiar with development under Linux environment.
+
+% %-----------EXPERIENCE-----------
+% \section{Experience}
+%   \resumeSubHeadingListStart
+
+%     \resumeSubheading
+%       {Undergraduate Research Assistant}{June 2020 -- Present}
+%       {Texas A\&M University}{College Station, TX}
+%       \resumeItemListStart
+%         \resumeItem{Developed a REST API using FastAPI and PostgreSQL to store data from learning management systems}
+%         \resumeItem{Developed a full-stack web application using Flask, React, PostgreSQL and Docker to analyze GitHub data}
+%         \resumeItem{Explored ways to visualize GitHub collaboration in a classroom setting}
+%       \resumeItemListEnd
+
+% % -----------Multiple Positions Heading-----------
+% %    \resumeSubSubheading
+% %     {Software Engineer I}{Oct 2014 - Sep 2016}
+% %     \resumeItemListStart
+% %        \resumeItem{Apache Beam}
+% %          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+% %     \resumeItemListEnd
+% %    \resumeSubHeadingListEnd
+% %-------------------------------------------
+
+%     \resumeSubheading
+%       {Information Technology Support Specialist}{Sep. 2018 -- Present}
+%       {Southwestern University}{Georgetown, TX}
+%       \resumeItemListStart
+%         \resumeItem{Communicate with managers to set up campus computers used on campus}
+%         \resumeItem{Assess and troubleshoot computer problems brought by students, faculty and staff}
+%         \resumeItem{Maintain upkeep of computers, classroom equipment, and 200 printers across campus}
+%     \resumeItemListEnd
+
+%     \resumeSubheading
+%       {Artificial Intelligence Research Assistant}{May 2019 -- July 2019}
+%       {Southwestern University}{Georgetown, TX}
+%       \resumeItemListStart
+%         \resumeItem{Explored methods to generate video game dungeons based off of \emph{The Legend of Zelda}}
+%         \resumeItem{Developed a game in Java to test the generated dungeons}
+%         \resumeItem{Contributed 50K+ lines of code to an established codebase via Git}
+%         \resumeItem{Conducted  a human subject study to determine which video game dungeon generation technique is enjoyable}
+%         \resumeItem{Wrote an 8-page paper and gave multiple presentations on-campus}
+%         \resumeItem{Presented virtually to the World Conference on Computational Intelligence}
+%       \resumeItemListEnd
+
+%   \resumeSubHeadingListEnd
+
+%-----------OPEN SOURCE CONTRIBUTION-----------
+\section{Open Source Contribution}
+\begin{itemize}[leftmargin=0.15in, label={}]
+	\item \textbf{Rust}: I have submitted a
+	      \href{https://github.com/rust-lang/rust/pull/155693}{\underline{PR}} to the Rust project to
+	      improve compiler diagnostics for a frequently used macro \texttt{format\_args!} by
+	      conservatively inferring user intention from the AST input and emitting suggested fix that
+	      are likely to be what user expect. It was merged at April 27, 2026.
+\end{itemize}
+
+\begin{itemize}[leftmargin=0.15in, label={}]
+	\item \textbf{Burn}: Burn is a deep learning framework written in Rust. I have submitted a
+	      \href{https://github.com/tracel-ai/burn/pull/3319}{\underline{PR}} to fix error messages of
+	      tensor flatten operation that are inconsistent with the failure conditions.
+\end{itemize}
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+	\small{\item{
+	      \textbf{Programming Languages}{: Rust, C/C++, Python} \\
+	      \textbf{Tools}{: Linux (Ubuntu/Linux Mint), GDB/LLDB, perf\_event (perf), Git, Docker, PostgreSQL} \\
+	      \textbf{Frameworks}{: Actix Web, Sqlx, Tokio, Loco.rs, NumPy, PyTorch} \\
+	      }}
+\end{itemize}
+
+%-----------PROJECTS-----------
+\section{Projects}
+\resumeSubHeadingListStart
+\resumeProjectHeading
+{\textbf{StreaMeme} $|$ \emph{Rust, Actix Web, Tokio, Python, PyTorch}}{}
+\resumeItemListStart
+\resumeItem{This is a group project. We developed a system to recommend livestream
+	segments for inserting memes with Python, PyTorch and Phi-4-multimodal from Microsoft.
+	This can help video editing works by locating interesting segments in a livestream.}
+\resumeItem{I built the backend with Rust and Actix Web framework to drive our inference
+	core written in Python.}
+\resumeItem{I architected a queueing mechanism to prevent our lab server from being
+	overwhelmed by unbounded amount of inference requests, by sending all requests to a
+	dedicated thread that processes them sequentially, while keeping other threads scheduled
+	by Tokio async runtime to ensure responsiveness of the backend.}
+\resumeItem{Finalists of the 2025 30th International ICT Innovative Services Awards.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{Spinlock} $|$ \emph{Linux, Rust}}{}
+\resumeItemListStart
+\resumeItem{An MCS spinlock implementation inspired by Linux kernel MCS lock and paper
+	\href{https://people.csail.mit.edu/nickolai/papers/boyd-wickizer-locks.pdf}{\underline{Non-scalable locks are dangerous}}.}
+\resumeItem{This project aims to improve my knowledge in concurrecy control concepts,
+	involving atomic operations, memory ordering, fair locking, energy-aware spinning, and
+	scalability under multi-core environment.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{Booklyn} $|$ \emph{PostgreSQL, Docker, Swagger UI, Rust, Actix Web, Sqlx}}{}
+\resumeItemListStart
+\resumeItem{It's a group project. We develop a book-centric social platform that
+	integrates user reviews collected from internet and provides personalized recommendations.}
+\resumeItem{I was solely responsible for the backend, which is built in Rust, Actix Web
+	and Sqlx frameworks, and we chose PostgreSQL for our DB.}
+\resumeItem{I integrated Swagger UI to automatically generate API document from OpenAPI
+	specification, providing clear API contract for the frontend team and improving team
+	velocity.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{Jack-compiler} $|$ \emph{Rust, Logos, Lalrpop}}{}
+\resumeItemListStart
+\resumeItem{A simple compiler frontend that generates AST for JACK programming language in XML format.}
+\resumeItem{Integrate Logos framework for lexing and Lalrpop framework for parsing.}
+\resumeItem{Test XML files writing function through buffered I/O and in-memory simulation, reducing
+testing time by 50\% compared to real file I/O.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+
+%
+
+
+%-------------------------------------------
+\end{document}
