@@ -1,25 +1,31 @@
-OUTDIR=build
+override VERSIONS=system backend
 
 SOURCE=master/resume.tex
 override BASENAME=$(basename $(notdir $(SOURCE)))
 
-OPEN=system backend
+OUTDIR=build
+
+OPEN=$(VERSIONS)
 override OPEN_PDFS=$(foreach open, $(OPEN), $(OUTDIR)/$(open)/$(BASENAME).pdf)
 
-.PHONY: all system backend open clean
+.PHONY: all open clean versions $(VERSIONS)
 
-all: system backend
+all: $(VERSIONS)
 
-system $(OUTDIR)/system/$(BASENAME).pdf: $(SOURCE)
-	@echo 'Building "system" version...'
-	latexmk -g -pdf -usepretex="\def\system{}" --outdir="$(OUTDIR)/system" $^ > /dev/null
+# Generate build rules for all versions
+override define VERSION_BUILD_RULE
+$(1) $(OUTDIR)/$(1)/$(BASENAME).pdf: $(SOURCE)
+	@echo 'Building "$(1)" version...'
+	latexmk -g -pdf -usepretex="\def\$(1){}" --outdir="$(OUTDIR)/$(1)" $(SOURCE) > /dev/null
 
-backend $(OUTDIR)/backend/$(BASENAME).pdf: $(SOURCE)
-	@echo 'Building "backend" version...'
-	latexmk -g -pdf -usepretex="\def\backend{}" --outdir="$(OUTDIR)/backend" $^ > /dev/null
+endef
+$(foreach version, $(VERSIONS), $(eval $(call VERSION_BUILD_RULE,$(version))))
 
-open: $(OPEN_PDFS)
-	$(foreach pdf, $^, open $(pdf);)
+open: $(SOURCE) $(OPEN_PDFS)
+	@$(foreach pdf, $(OPEN_PDFS), open $(pdf);)
+
+versions:
+	@$(foreach version, $(VERSIONS), echo $(version);)
 
 clean:
 	@-rm -rf $(OUTDIR)
