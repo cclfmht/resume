@@ -1,4 +1,4 @@
-override VERSIONS=system backend
+override VERSIONS=system backend tsmc
 
 SOURCE=master/resume.tex
 override BASENAME=$(basename $(notdir $(SOURCE)))

@@ -146,6 +146,16 @@
 	with CPU-bound tasks, and reducing test time by 50\% through buffered I/O and in-memory simulation.
 }{}
 
+\ifboolexpr{ test {\ifcsdef{tsmc}} }{
+	\section{Summary}
+	Information Management graduate at National Taiwan University with strong experience in Rust, C, alongside
+	C++, Python, TypeScript and functional programming fundamentals. Contributor to official Rust compiler
+	with proven track record (in \hyperref[sec:osc]{Open Source Contribution} section). Passionate about system
+	softwares, compiler development, high-performance engineering, concurrent and asynchronous programming.
+	Experienced in building fair and scalable MCS spinlock, high-performance Web backend to handle I/O-bound in
+	combination with CPU-bound tasks, and reducing test time by 50\% through buffered I/O and in-memory simulation.
+}{}
+
 %-----------OPEN SOURCE CONTRIBUTION-----------
 \section{Open Source Contribution}
 \label{sec:osc}
@@ -162,7 +172,7 @@
 		            referenced type, avoid confusing diagnostics that might lead to wrong fix or impose an incorrect mental model on users.
 		            This \href{https://github.com/rust-lang/rust/pull/159168}{\underline{PR}} was merged on July 15, 2026.
 	      \end{itemize}
-	      \ifboolexpr{ test {\ifcsdef{system}} }{
+	      \ifboolexpr{ test {\ifcsdef{system}} or test {\ifcsdef{tsmc}} }{
 	\item \textbf{Burn} (A deep learning framework written in Rust)
 	      \begin{itemize}[leftmargin=0.15in]
 		      \item
@@ -195,11 +205,21 @@
 	\end{itemize}
 }{}
 
+\ifboolexpr{ test {\ifcsdef{tsmc}}}{
+	\section{Technical Skills}
+	\begin{itemize}[leftmargin=0.15in, label={}]
+		\small{\item{
+		      \textbf{Programming Languages}{: Rust, C, C++, Python, TypeScript} \\
+		      \textbf{Tools}{: Linux (Ubuntu/Linux Mint), Git, GDB/LLDB, perf\_event (perf), GNU Make, Docker, PostgreSQL, Bruno} \\
+		      }}
+	\end{itemize}
+}{}
+
 %-----------PROJECTS-----------
 \section{Projects}
 \resumeSubHeadingListStart
 
-\ifboolexpr{ test {\ifcsdef{system}} or test {\ifcsdef{backend}} }{
+\ifboolexpr{ test {\ifcsdef{system}} or test {\ifcsdef{backend}} or test {\ifcsdef{tsmc}}}{
 	\resumeProjectHeading
 	{\textbf{StreaMeme} $|$ \emph{Rust, Actix Web, Tokio, Python, PyTorch}}{}
 	\resumeItemListStart
@@ -230,7 +250,7 @@
 	\resumeItemListEnd
 }{}
 
-\ifboolexpr{ test {\ifcsdef{system}} }{
+\ifboolexpr{ test {\ifcsdef{system}} or test {\ifcsdef{tsmc}} }{
 	\resumeProjectHeading
 	{\textbf{Spinlock} $|$ \emph{Linux, Rust}}{}
 	\resumeItemListStart
@@ -256,7 +276,7 @@
 	\resumeItemListEnd
 }{}
 
-\ifboolexpr{ test {\ifcsdef{system}} }{
+\ifboolexpr{ test {\ifcsdef{system}} or test {\ifcsdef{tsmc}} }{
 	\resumeProjectHeading
 	{\textbf{Jack-compiler} $|$ \emph{Rust, Logos, Lalrpop}}{}
 	\resumeItemListStart
