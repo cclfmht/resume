@@ -35,3 +35,6 @@ By default, source file is put at `master/resume.tex`, but you can specify the i
 ```bash
 make SOURCE=<master-source>
 ```
+
+### Add a New Version
+Thanks to Make, adding new version can be quite easy. Just append the version name to `VERSIONS` variable in `Makefile`, and then you can start opt-in the items you want to show for that version in the resume source.
