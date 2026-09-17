@@ -133,7 +133,7 @@
 	with proven track record (in \hyperref[sec:osc]{Open Source Contribution} section). Passionate about system
 	softwares, compiler development, high-performance engineering, concurrent and asynchronous programming.
 	Experienced in building fair and scalable MCS spinlock, high-performance Web backend to handle I/O-bound in
-	combination with CPU-bound tasks, and reducing test time by 50\% through buffered I/O and in-memory simulation.
+	combination with CPU-bound tasks, and reducing test time by 50\% through in-memory simulation.
 }{}
 
 \ifboolexpr{ test {\ifcsdef{backend}} }{
@@ -163,24 +163,30 @@
 	\item \textbf{Rust}
 	      \begin{itemize}[leftmargin=0.15in]
 		      \item
-		            Improved compiler diagnostics for a frequently used macro \texttt{format\_args!} by conservatively inferring
-		            user intention from the AST input and emitting suggested fix that are likely to be what user expect.
-		            This \href{https://github.com/rust-lang/rust/pull/155693}{\underline{PR}} was merged on April 27, 2026.
+		            Fixed an internal compiler error due to violation of an invariant while the global value numbering pass is interacting
+		            with the constant evaluation system. This fix prevented the compiler from crashing while compiling certain kinds of
+		            programs, along with some cleanup of a redundant check and outdated documentation.
+		            The \href{https://github.com/rust-lang/rust/pull/162463}{\underline{PR}} was merged on Sep 15, 2026.
 		      \item
 		            Fixed the diagnostic logic error of \texttt{static\_mut\_refs} lint while checking what diagnostics should
 		            be emitted according to the mutability of the reference and the interior mutability of the
 		            referenced type, avoid confusing diagnostics that might lead to wrong fix or impose an incorrect mental model on users.
-		            This \href{https://github.com/rust-lang/rust/pull/159168}{\underline{PR}} was merged on July 15, 2026.
-	      \end{itemize}
-	      \ifboolexpr{ test {\ifcsdef{system}} or test {\ifcsdef{tsmc}} }{
-	\item \textbf{Burn} (A deep learning framework written in Rust)
-	      \begin{itemize}[leftmargin=0.15in]
+		            The \href{https://github.com/rust-lang/rust/pull/159168}{\underline{PR}} was merged on July 15, 2026.
 		      \item
-		            Corrected error messages of tensor flatten operation that are inconsistent with the failure conditions.
-		            This \href{https://github.com/tracel-ai/burn/pull/3319}{\underline{PR}} was merged
-		            on July 8, 2025.
+		            Improved compiler diagnostics for a frequently used macro \texttt{format\_args!} by conservatively inferring
+		            user intention from the AST input and emitting suggested fix that are likely to be what user expect.
+		            The \href{https://github.com/rust-lang/rust/pull/155693}{\underline{PR}} was merged on April 27, 2026.
+
 	      \end{itemize}
-	      }{}
+	      %       \ifboolexpr{ test {\ifcsdef{system}} or test {\ifcsdef{tsmc}} }{
+	      % \item \textbf{Burn} (A deep learning framework written in Rust)
+	      %       \begin{itemize}[leftmargin=0.15in]
+	      % 	      \item
+	      % 	            Corrected error messages of tensor flatten operation that are inconsistent with the failure conditions.
+	      % 	            This \href{https://github.com/tracel-ai/burn/pull/3319}{\underline{PR}} was merged
+	      % 	            on July 8, 2025.
+	      %       \end{itemize}
+	      %       }{}
 \end{itemize}
 
 %-----------PROGRAMMING SKILLS-----------
