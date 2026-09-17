@@ -163,9 +163,9 @@
 	\item \textbf{Rust}
 	      \begin{itemize}[leftmargin=0.15in]
 		      \item
-		            Fixed an internal compiler error due to violation of an invariant while the global value numbering pass is interacting
-		            with the constant evaluation system. This fix prevented the compiler from crashing while compiling certain kinds of
-		            programs, along with some cleanup of a redundant check and outdated documentation.
+		            Fixed an internal compiler error due to violation of an invariant while the global value numbering pass is interning
+		            the computed result from the constant evaluation system to the global memory map.
+		            This fix prevented the compiler from crashing while compiling certain kinds of programs, along with some cleanup of a redundant check and outdated documentation.
 		            The \href{https://github.com/rust-lang/rust/pull/162463}{\underline{PR}} was merged on Sep 15, 2026.
 		      \item
 		            Fixed the diagnostic logic error of \texttt{static\_mut\_refs} lint while checking what diagnostics should
