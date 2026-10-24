@@ -22,7 +22,7 @@ endef
 $(foreach version, $(VERSIONS), $(eval $(call VERSION_BUILD_RULE,$(version))))
 
 open: $(SOURCE) $(OPEN_PDFS)
-	@$(foreach pdf, $(OPEN_PDFS), open $(pdf);)
+	@$(foreach pdf, $(OPEN_PDFS), xdg-open $(pdf);)
 
 versions:
 	@$(foreach version, $(VERSIONS), echo $(version);)
